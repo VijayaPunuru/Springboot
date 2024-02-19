@@ -31,6 +31,7 @@ public class MemberService {
     }
     public boolean updateMember(Long memberId, Member member) {
         if (memberMap.containsKey(memberId)) {
+            member.setMemberId(memberId);
             memberMap.put(memberId, member);
             return true;
         } else {

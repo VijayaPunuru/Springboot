@@ -26,6 +26,7 @@ public class BookService {
     }
     public boolean updateBook(int bookId, Book book) {
         if (bookMap.containsKey(bookId)) {
+            book.setBookId(bookId);
             bookMap.put(bookId, book);
             return true;
         } else {
